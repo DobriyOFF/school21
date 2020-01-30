@@ -1,44 +1,40 @@
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }
 
-void ft_print_comb2(void)
+void	ft_print_comb2(void)
 {
-    int x;
-    int y;
-	int num1;
-	int num2;
+	int		i;
+	int		j;
 
-
-    x = '0' - 1;
-    num1 = '0' - 1;
-   	while(++x <= '9' && ++num1 <= '9')
-    {
-        y = x;
-     	num2 = num1;
-	 	while(y <= '9' && num2 <= '9')
-        {
-            ft_putchar(x);
-            ft_putchar(y);
+	i = 0;
+	while (i <= 98)
+	{
+		j = i + 1;
+		while (j <= 99)
+		{
+			ft_putchar((i / 10) + 48);
+			ft_putchar((i % 10) + 48);
 			ft_putchar(' ');
-			ft_putchar(num1);
-			ft_putchar(num2);
-            if ((x != '9' || y != '9') && (num1 != '9' || num2 != '9'))
-            {
-                ft_putchar(',');
-                ft_putchar(' ');
-            }
-            y++;
-			num2++;
-        }
-    }
+			ft_putchar((j / 10) + 48);
+			ft_putchar((j % 10) + 48);
+			if (i != 98 || j != 99)
+			{
+				ft_putchar(',');
+				ft_putchar(' ');
+			}
+			j++;
+		}
+		i++;
+	}
 }
 
-int main()
+int	main()
 {
-    ft_print_comb2();
-    ft_putchar('\n');
+	ft_print_comb2();
+	ft_putchar(‘\n’);
+	return(0);
 }
