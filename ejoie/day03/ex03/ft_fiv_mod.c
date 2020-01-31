@@ -1,25 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_fiv_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejoie <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/29 23:19:54 by ejoie             #+#    #+#             */
-/*   Updated: 2020/01/29 23:21:37 by ejoie            ###   ########.fr       */
+/*   Created: 2020/01/31 19:42:23 by ejoie             #+#    #+#             */
+/*   Updated: 2020/01/31 20:01:05 by ejoie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_is_negative(int n)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	if (n >= 0)
-	{
-		ft_putchar('P');
-	}
-	else
-	{
-		ft_putchar('N');
-	}
+	*div = a / b;
+	*mod = a % b;
 }

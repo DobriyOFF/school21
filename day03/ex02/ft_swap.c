@@ -1,42 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejoie <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/30 19:04:23 by ejoie             #+#    #+#             */
-/*   Updated: 2020/01/30 19:21:43 by ejoie            ###   ########.fr       */
+/*   Created: 2020/01/31 19:29:39 by ejoie             #+#    #+#             */
+/*   Updated: 2020/01/31 19:38:44 by ejoie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_comb(void)
+void	ft_swap(int *a, int *b)
 {
-	int		x;
-	int		y;
-	int		z;
+	int k;
 
-	x = '0' - 1;
-	while (++x <= '9')
-	{
-		y = x;
-		while (++y <= '9')
-		{
-			z = y + 1;
-			while (z <= '9')
-			{
-				ft_putchar(x);
-				ft_putchar(y);
-				ft_putchar(z);
-				if (x != '7' || y != '8' || z != '9')
-				{
-					ft_putchar(',');
-					ft_putchar(' ');
-				}
-				z++;
-			}
-		}
-	}
+	k = *a;
+	*a = *b;
+	*b = k;
+	ft_putchar(*a);
+	ft_putchar(*b);
 }

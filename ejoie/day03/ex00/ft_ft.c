@@ -1,25 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejoie <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/29 21:24:31 by ejoie             #+#    #+#             */
-/*   Updated: 2020/01/29 22:10:39 by ejoie            ###   ########.fr       */
+/*   Created: 2020/01/31 01:26:56 by ejoie             #+#    #+#             */
+/*   Updated: 2020/01/31 19:09:16 by ejoie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
+void	ft_ft(int *nbr)
 {
-	char letter;
-
-	letter = 'a';
-	while (letter <= 'z')
-	{
-		ft_putchar(letter);
-		letter++;
-	}
+	*nbr = 42;
 }
