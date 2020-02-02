@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ejoie <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ekyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/02 01:45:30 by ejoie             #+#    #+#             */
-/*   Updated: 2020/02/02 05:57:14 by ejoie            ###   ########.fr       */
+/*   Created: 2020/02/02 19:31:28 by ekyle             #+#    #+#             */
+/*   Updated: 2020/02/02 23:00:38 by ejoie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "ft_putchar.c"
-#include "rush00.c"
 
-int main()
+void	rush(int x, int y);
+
+int		main(void)
 {
-	rush(1, 3);
-	return(0);
+	rush(1, 6);
+	return (0);
 }
