@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekyle <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ejoie <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/02 19:31:28 by ekyle             #+#    #+#             */
-/*   Updated: 2020/02/03 04:23:33 by ejoie            ###   ########.fr       */
+/*   Created: 2020/02/03 06:43:22 by ejoie             #+#    #+#             */
+/*   Updated: 2020/02/03 07:21:10 by ejoie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "ft_putchar.c"
-#include "rush00.c"
 
-void	rush(int x, int y);
+void	ft_putchar(char c);
 
-int		main(void)
+void	ft_putstr(char *str)
 {
-	rush(5, 6);
-	return (0);
+	int i;
+
+	i = 0;
+	while (str[i] != 0)
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
 }
