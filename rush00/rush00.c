@@ -38,7 +38,7 @@ void	ft_first_last(int x_print)
 			ft_putchar('B');
 			x_print--;
 		}
-		ft_putchar('C');
+        ft_putchar('C');
 		ft_putchar('\n');
 	}
 	else if (x_print == 0)

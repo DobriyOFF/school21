@@ -6,7 +6,7 @@
 /*   By: ejoie <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/03 07:24:14 by ejoie             #+#    #+#             */
-/*   Updated: 2020/02/03 20:00:05 by ejoie            ###   ########.fr       */
+/*   Updated: 2020/02/04 06:25:35 by ejoie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,22 @@ void	ft_putchar(char c);
 
 void	ft_putnbr(int nb)
 {
-	if (nb > 2147483647 || nb < -2147483648)
+	long int c;
+
+	c = nb;
+	if (c > 2147483647 || c < -2147483648)
 		return ;
-	if (nb < 0)
+	if (c < 0)
 	{
-		nb = nb * -1;
+		c = c * -1;
 		ft_putchar('-');
 	}
-	if (nb < 10)
+	if (c < 10)
 	{
-		ft_putchar(nb + '0');
+		ft_putchar(c + '0');
 		return ;
 	}
-	ft_putnbr(nb / 10);
-	ft_putchar((nb % 10) + '0');
+	ft_putnbr(c / 10);
+	ft_putchar((c % 10) + '0');
 	return ;
 }
