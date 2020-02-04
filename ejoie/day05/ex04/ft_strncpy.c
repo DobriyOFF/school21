@@ -1,17 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fiv_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejoie <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/31 19:42:23 by ejoie             #+#    #+#             */
-/*   Updated: 2020/01/31 20:01:05 by ejoie            ###   ########.fr       */
+/*   Created: 2020/02/03 23:55:05 by ejoie             #+#    #+#             */
+/*   Updated: 2020/02/04 00:06:59 by ejoie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	*div = a / b;
-	*mod = a % b;
+	unsigned int	i;
+
+	i = 0;
+	while (src[i] != 0 && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return (dest);
 }
