@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejoie <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/31 19:29:39 by ejoie             #+#    #+#             */
-/*   Updated: 2020/02/05 01:44:51 by ejoie            ###   ########.fr       */
+/*   Created: 2020/02/04 23:09:59 by ejoie             #+#    #+#             */
+/*   Updated: 2020/02/04 23:18:03 by ejoie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_swap(int *a, int *b)
+char	*ft_strupcase(char *str)
 {
-	int k;
+	int i;
 
-	k = *a;
-	*a = *b;
-	*b = k;
-	ft_putchar(*a);
-	ft_putchar(*b);
+	i = 0;
+	while (str[i] != 0)
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		i++;
+	}
+	return (str);
 }

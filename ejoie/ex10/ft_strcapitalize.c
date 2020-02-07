@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejoie <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/31 19:29:39 by ejoie             #+#    #+#             */
-/*   Updated: 2020/02/05 01:44:51 by ejoie            ###   ########.fr       */
+/*   Created: 2020/02/04 23:22:26 by ejoie             #+#    #+#             */
+/*   Updated: 2020/02/04 23:39:41 by ejoie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_swap(int *a, int *b)
+char	*ft_strcapitalize(char *str)
 {
-	int k;
+	int i;
 
-	k = *a;
-	*a = *b;
-	*b = k;
-	ft_putchar(*a);
-	ft_putchar(*b);
+	if (str[0] >= 'a' && str[o] <= 'z')
+		str -= 32;
+	i = 1;
+	while (str[i] != 0)
+	{
+		if ((str[i] < '0' || (str[i] > '9' && str[i] < 'A') ||
+		(str[i] > 'Z' && str[i] < 'a') || str[i] > 'z'))
+		{
+			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+				str[i + 1] -= 32;
+		}
+		i++;
+	}
+	return (str);
 }
